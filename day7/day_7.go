@@ -201,7 +201,7 @@ func getFullPath(start *Directory) string {
 
 func main() {
 
-	f, err := os.Open("input_d7.txt")
+	f, err := os.Open("day7/input_d7.txt")
 	if err != nil {
 		log.Fatal(err)
 	}

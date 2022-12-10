@@ -24,7 +24,7 @@ func Reverse(input []string) []string {
 
 func main() {
 
-	f, err := os.Open("input_d5.txt")
+	f, err := os.Open("day5/input_d5.txt")
 	if err != nil {
 		log.Fatal(err)
 	}

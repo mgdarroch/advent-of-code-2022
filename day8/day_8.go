@@ -153,7 +153,7 @@ func checkRight(grid [][]int, i, j int, curr int) bool {
 }
 
 func main() {
-	f, err := os.Open("input_d8.txt")
+	f, err := os.Open("day8/input_d8.txt")
 	if err != nil {
 		log.Fatal(err)
 	}

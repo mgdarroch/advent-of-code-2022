@@ -11,7 +11,7 @@ func main() {
 
 	// A = Rock, B = Paper, C = Scissors
 	// Y = Paper, X = Rock, Z = Scissors
-	f, err := os.Open("input_d2.txt")
+	f, err := os.Open("day2/input_d2.txt")
 	if err != nil {
 		log.Fatal(err)
 	}

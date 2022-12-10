@@ -98,7 +98,7 @@ func (node1 Position) touching(node2 Position) bool {
 }
 
 func main() {
-	input, _ := os.ReadFile("input_d9.txt")
+	input, _ := os.ReadFile("day9/input_d9.txt")
 	moves := parseMoves(string(input))
 	head := makeRope(10)
 	head = runMoves(head, moves)

@@ -10,7 +10,7 @@ import (
 
 func main() {
 
-	f, err := os.Open("input_d3.txt")
+	f, err := os.Open("day3/input_d3.txt")
 	if err != nil {
 		log.Fatal(err)
 	}

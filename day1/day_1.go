@@ -11,7 +11,7 @@ import (
 
 func main() {
 
-	f, err := os.Open("input_d1.txt")
+	f, err := os.Open("day1/input_d1.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -27,7 +27,6 @@ func main() {
 	for scanner.Scan() {
 		strVal := scanner.Text()
 		if strVal == "" {
-			fmt.Println("Empty line, next Elf.")
 			if count > highVal {
 				highVal = count
 			}
