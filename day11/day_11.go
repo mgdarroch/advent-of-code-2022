@@ -19,19 +19,11 @@ type Monkey struct {
 
 func main() {
 	monkeyMap := parseInput()
-	printMonkeyItems(monkeyMap)
-	//fmt.Println(monkeyMap)
-
 	// can only run one at a time because i committed to using pointers and actually editing the monkeys
 	// probably a smarter way to do it.
 	//throwItems(monkeyMap, true, 20)
 	throwItems(monkeyMap, false, 10000)
 
-	fmt.Println("\nMonkeys at Round 20:")
-	printMonkeyItems(monkeyMap)
-	for i := 0; i < len(monkeyMap); i++ {
-		fmt.Println("Monkey", i, "inspected", monkeyMap[i].itemsInspected, "items.")
-	}
 	fmt.Println("Monkey Business:", getMonkeyBusiness(monkeyMap))
 }
 
