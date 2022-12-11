@@ -35,26 +35,19 @@ func printMonkeyItems(monkeyMap map[int]*Monkey) {
 }
 
 func throwItems(monkeyMap map[int]*Monkey, relief bool, rounds int) {
+	// in other words, prime number magic
+	// then use the remainder as the new divisible
+	// maffs
+	x := int64(1)
+	x *= 7
+	x *= 19
+	x *= 5
+	x *= 11
+	x *= 17
+	x *= 13
+	x *= 2
+	x *= 3
 	for round := 0; round < rounds; round++ {
-		// i was just so worried that my level of worry was causing overflow
-		// so i'm adopting a new solution to stop the overflow (I think that's the problem?)
-		// this way the number will stay manageable but it won't interfere with the monkey tests?
-		// my reasoning is that if we assume that an item has been thrown once to EVERY monkey,
-		// then we should theoretically be able to run a division on the worry number of that item
-		// by all of the divisors multiplied together(which is the same as doing a divide by every monkey sequentially)
-		// and it should return 1 and then be appended and the cycle continues with no weird overflows.
-
-		// could do this in a for loop if i attached the div number to the Monke but today is the sabbath
-		// and i am lazy
-		x := 1
-		x *= 7
-		x *= 19
-		x *= 5
-		x *= 11
-		x *= 17
-		x *= 13
-		x *= 2
-		x *= 3
 		for i := 0; i < len(monkeyMap); i++ {
 			monkey := monkeyMap[i]
 			for _, item := range monkey.items {
