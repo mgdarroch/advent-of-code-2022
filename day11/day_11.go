@@ -37,7 +37,7 @@ func printMonkeyItems(monkeyMap map[int]*Monkey) {
 func throwItems(monkeyMap map[int]*Monkey, relief bool, rounds int) {
 	// in other words, prime number magic
 	// then use the remainder as the new divisible
-	// maffs
+	// testVal = testVal % x  <--- we ensure that the testVal number is within a range 0 - X which will mean the divisible tests always work
 	x := int64(1)
 	x *= 7
 	x *= 19
