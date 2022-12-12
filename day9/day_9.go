@@ -100,8 +100,8 @@ func (node1 Position) touching(node2 Position) bool {
 func main() {
 	input, _ := os.ReadFile("day9/input_d9.txt")
 	moves := parseMoves(string(input))
-	head := makeRope(10)
-	head = runMoves(head, moves)
-	fmt.Println("Head and Tail:", len(head.getNth(1).visited))
-	fmt.Println("I am tired of this motherfucking Snake on this motherfucking Puzzle:", len(head.getNth(9).visited))
+	rope := makeRope(10)
+	rope = runMoves(rope, moves)
+	fmt.Println("Head and Tail:", len(rope.getNth(1).visited))
+	fmt.Println("I am tired of this motherfucking Snake on this motherfucking Puzzle:", len(rope.getNth(9).visited))
 }

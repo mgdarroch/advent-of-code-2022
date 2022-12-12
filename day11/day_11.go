@@ -19,9 +19,6 @@ type Monkey struct {
 
 func main() {
 	monkeyMap := parseInput()
-	// can only run one at a time because i committed to using pointers and actually editing the monkeys
-	// probably a smarter way to do it.
-	//throwItems(monkeyMap, true, 20)
 	throwItems(monkeyMap, false, 10000)
 
 	fmt.Println("Monkey Business:", getMonkeyBusiness(monkeyMap))
@@ -35,9 +32,7 @@ func printMonkeyItems(monkeyMap map[int]*Monkey) {
 }
 
 func throwItems(monkeyMap map[int]*Monkey, relief bool, rounds int) {
-	// in other words, prime number magic
-	// then use the remainder as the new divisible
-	// testVal = testVal % x  <--- we ensure that the testVal number is within a range 0 - X which will mean the divisible tests always work
+
 	x := int64(1)
 	x *= 7
 	x *= 19
