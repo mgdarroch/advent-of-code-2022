@@ -8,15 +8,15 @@ import (
 
 func main() {
 	input, _ := os.ReadFile("day12/input_d12.txt")
-	height, start, end := readMap(string(input))
+	heightMap, start, end := readMap(string(input))
 
-	part1 := getShortestPath(height, map[Position]int{}, Visit{start, 0},
+	part1 := getShortestPath(heightMap, map[Position]int{}, Visit{start, 0},
 		func(dh int) bool { return dh <= 1 },
 		func(p Position) bool { return end == p })
 
-	part2 := getShortestPath(height, map[Position]int{}, Visit{end, 0},
+	part2 := getShortestPath(heightMap, map[Position]int{}, Visit{end, 0},
 		func(dh int) bool { return dh >= -1 },
-		func(p Position) bool { return height[p] == 'a' })
+		func(p Position) bool { return heightMap[p] == 'a' })
 
 	fmt.Printf("part1: %v\npart2: %v\n", part1, part2)
 }
