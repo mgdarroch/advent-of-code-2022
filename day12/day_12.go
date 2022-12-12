@@ -22,6 +22,17 @@ func main() {
 }
 
 func getShortestPath(heightMap map[Position]int, visits map[Position]int, visitPosition Visit, okToMove func(d int) bool, target func(Position) bool) int {
+
+	//Initialize a stack with the starting position loc and a min variable to keep track of the minimum distance found so far.
+	//	While the stack is not empty:
+	//Pop the top element from the stack and set it as the current position.
+	//	If the current position is the target position, update the min variable if the current distance is smaller than the current value of min.
+	//	If the current position has been visited before and the previous distance was smaller than or equal to the current distance, skip this position.
+	//	Otherwise, mark the current position as visited with the current distance.
+	//	For each of the four possible neighbors (up, down, left, and right):
+	//If the neighbor position is inside the map and the height difference is allowed by the ok function, append the neighbor position to the stack.
+	//	Return the final value of min as the result.
+
 	min := 9999
 	stack := []Visit{visitPosition}
 	for len(stack) > 0 {
